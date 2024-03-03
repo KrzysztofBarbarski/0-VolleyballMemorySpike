@@ -3,9 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34526.213
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9E0F0235-C14B-4405-9250-E910DFC677F7}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile2.txt = TextFile2.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{55A0E84C-A201-462A-9A00-860A5D2DC813}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballMemorySpike", "VolleyballMemorySpike\VolleyballMemorySpike\VolleyballMemorySpike.csproj", "{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolleyballMemorySpike.Client", "VolleyballMemorySpike\VolleyballMemorySpike.Client\VolleyballMemorySpike.Client.csproj", "{F3CF4326-87A5-4359-85D1-9B3B91BB14E9}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CF4326-87A5-4359-85D1-9B3B91BB14E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CF4326-87A5-4359-85D1-9B3B91BB14E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CF4326-87A5-4359-85D1-9B3B91BB14E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CF4326-87A5-4359-85D1-9B3B91BB14E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03534D4E-B4D2-4ECB-9C3A-6E889DAD697B} = {9E0F0235-C14B-4405-9250-E910DFC677F7}
+		{F3CF4326-87A5-4359-85D1-9B3B91BB14E9} = {9E0F0235-C14B-4405-9250-E910DFC677F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FB610A7C-AFA1-4544-8CEC-84AB4D3E19B1}
