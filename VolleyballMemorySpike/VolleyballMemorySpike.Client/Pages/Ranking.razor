@@ -1,0 +1,42 @@
+﻿@page "/ranking"
+@using VolleyballMemorySpike.Shared.Models
+
+@inject IHttpClientFactory _httpClientFactory
+
+@if (usersScores == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>User</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userScore in usersScores)
+            {
+                <tr>
+                    <td>@userScore.DateUtc</td>
+                    <td>@userScore.NickName</td>
+                    <td>@userScore.Score</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private UserScore[]? usersScores;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var client = _httpClientFactory.CreateClient(ApiClientHelper.NotSecured);
+
+        usersScores = await client.GetFromJsonAsync<UserScore[]>("api/UserRanking/GetUsersRanking");
+    }
+}
