@@ -1,4 +1,4 @@
-﻿using Volleyballn.Api.Abstraction;
+﻿using VolleyballMemorySpike.Api.Abstraction;
 
 namespace VolleyballMemorySpike.Database.Entities.Users;
 
