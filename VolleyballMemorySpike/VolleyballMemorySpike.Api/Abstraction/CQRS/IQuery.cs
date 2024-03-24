@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Volleyballn.Api.Abstraction;
+using VolleyballMemorySpike.Api.Abstraction;
 
 namespace VolleyballMemorySpike.Abstraction.CQRS;
 
