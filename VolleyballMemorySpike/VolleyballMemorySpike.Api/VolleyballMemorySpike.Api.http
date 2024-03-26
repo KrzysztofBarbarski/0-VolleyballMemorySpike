@@ -1,0 +1,6 @@
+@VolleyballMemorySpike.Api_HostAddress = http://localhost:5198
+
+GET {{VolleyballMemorySpike.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
