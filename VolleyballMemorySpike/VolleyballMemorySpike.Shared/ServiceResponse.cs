@@ -1,4 +1,4 @@
-﻿namespace BlazorEcommerce.Shared;
+﻿namespace VolleyballMemorySpike.Shared;
 
 public class ServiceResponse<T>
 {

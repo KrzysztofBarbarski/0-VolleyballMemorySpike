@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using VolleyballMemorySpike.Client;
+using VolleyballMemorySpike.Client.Helpers;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped<CustomAuthorizationMessageHandler>();
+builder.Services.AddScoped<AzureAdB2CAuthorizationMessageHandler>();
 
 builder.Services.AddHttpClient(ApiClientHelper.Secured, client => client.BaseAddress = new Uri(ApiClientHelper.Url))
-    .AddHttpMessageHandler<CustomAuthorizationMessageHandler>();
+    .AddHttpMessageHandler<AzureAdB2CAuthorizationMessageHandler>();
 
 builder.Services.AddHttpClient(ApiClientHelper.NotSecured, client => client.BaseAddress = new Uri(ApiClientHelper.Url));
 

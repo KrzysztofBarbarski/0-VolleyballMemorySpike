@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "VolleyballMemorySpike.Client\\VolleyballMemorySpike.Client.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "VolleyballMemorySpike.Api\\VolleyballMemorySpike.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
