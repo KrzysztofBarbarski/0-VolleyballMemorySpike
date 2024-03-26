@@ -41,7 +41,7 @@ public class UsersController : ControllerBase
     [HttpPost("AddUser")]
     public async Task<IActionResult> AddUser(CancellationToken cancellationToken)
     {
-        var currentUser = await _authService.GetCurrentUser();
+        var currentUser = _authService.GetCurrentUser();
 
         if (currentUser == null)
         {
