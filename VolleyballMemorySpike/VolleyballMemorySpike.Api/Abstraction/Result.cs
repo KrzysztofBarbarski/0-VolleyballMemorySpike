@@ -1,7 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Text.Json.Serialization;
-
-namespace VolleyballMemorySpike.Api.Abstraction;
+﻿namespace VolleyballMemorySpike.Api.Abstraction;
 
 public class Result
 {

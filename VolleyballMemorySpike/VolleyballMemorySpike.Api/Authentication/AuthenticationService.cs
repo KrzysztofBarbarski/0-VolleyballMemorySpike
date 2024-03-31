@@ -10,7 +10,7 @@ public class AuthenticationService
     private readonly IDbContextFactory<ApplicationDbContext> _contextFactory;
 
     public AuthenticationService(
-        IHttpContextAccessor httpContextAccessor, 
+        IHttpContextAccessor httpContextAccessor,
         IDbContextFactory<ApplicationDbContext> contextFactory)
     {
         _httpContextAccessor = httpContextAccessor;
@@ -29,8 +29,8 @@ public class AuthenticationService
         var userEmail = _httpContextAccessor?.HttpContext?.User?.FindFirst("emails")?.Value;
 
         // TODO: Refactor and add domain execption
-        if (string.IsNullOrEmpty(userGuidFromAzure) || 
-            string.IsNullOrEmpty(userNickName) || 
+        if (string.IsNullOrEmpty(userGuidFromAzure) ||
+            string.IsNullOrEmpty(userNickName) ||
             string.IsNullOrEmpty(userEmail))
         {
             throw new Exception();
@@ -49,7 +49,7 @@ public class AuthenticationService
 
     public async Task<long?> GetCurrentUserId()
     {
-        if(_httpContextAccessor?.HttpContext?.User?.Identity?.IsAuthenticated == false)
+        if (_httpContextAccessor?.HttpContext?.User?.Identity?.IsAuthenticated == false)
         {
             return null;
         }
