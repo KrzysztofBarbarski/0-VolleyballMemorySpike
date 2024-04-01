@@ -26,7 +26,7 @@ public class GameScoreController : ControllerBase
     {
         var currentUserId = await _authService.GetCurrentUserId();
 
-        if(currentUserId == null)
+        if (currentUserId == null)
         {
             return BadRequest(UserErrors.UserIdDontExist);
         }
@@ -35,9 +35,9 @@ public class GameScoreController : ControllerBase
             request.SessionId,
             request.Score,
             currentUserId.Value);
-        
+
         var result = await _sender.Send(command, cancellationToken);
-        
+
         return result.IsSuccess ? Ok() : BadRequest(result.Error);
     }
 }
