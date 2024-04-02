@@ -1,9 +1,9 @@
-﻿using VolleyballMemorySpike.Shared;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VolleyballMemorySpike.Authentication;
 using VolleyballMemorySpike.Database.Entities.Users;
+using VolleyballMemorySpike.Shared;
 using User = VolleyballMemorySpike.Shared.Models.User;
 
 namespace VolleyballMemorySpike.Api.Features.Users;
@@ -26,7 +26,7 @@ public class UsersController : ControllerBase
     public async Task<IActionResult> Get(string userAzureId)
     {
         var query = new GetUserByAzureId.Query(userAzureId);
-        
+
         var result = await _sender.Send(query, CancellationToken.None);
 
         var output = new ServiceResponse<User>
