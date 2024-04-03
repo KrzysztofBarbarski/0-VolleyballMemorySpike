@@ -1,8 +1,5 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading;
-using VolleyballMemorySpike.Features.GameScore;
 
 namespace VolleyballMemorySpike.Api.Features.UsersRanking
 {
